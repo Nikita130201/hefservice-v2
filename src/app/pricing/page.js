@@ -9,7 +9,7 @@ import Reveal from "@/components/Reveal"; // 👈 подключили
 const COUNTRY_RU = {
   Russia: "Россия",
   Ukraine: "Украина",
-  Kyrgyzstan: "Киргизстан",
+  Kyrgyzstan: "Кыргызстан",
   Kazakhstan: "Казахстан",
   Georgia: "Грузия",
   Lithuania: "Литва",

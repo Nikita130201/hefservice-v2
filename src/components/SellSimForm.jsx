@@ -222,7 +222,7 @@ export default function SellSimForm() {
         <label className="text-sm font-medium">Операторы</label>
         <input
           type="text"
-          placeholder="Введите оператор и нажмите Enter (можно через запятую)"
+          placeholder="Введите оператора и нажмите Enter"
           onKeyDown={onAddFromInput}
           className="w-full rounded-xl border border-[var(--hef-border)] bg-[var(--hef-surface)] px-3 py-2 text-[15px] focus:ring-2 focus:ring-[var(--hef-accent)] outline-none transition"
         />
