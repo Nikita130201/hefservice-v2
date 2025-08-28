@@ -1,0 +1,134 @@
+[
+  { "country": "Russia", 
+  "flag": "/flags/russia.svg", 
+  "operator": "MTS",            
+  "logo": "/operators/mts.png",            
+  "price": [120, 200], "currency": "₽", "details": [
+     "SIM должна регистрироваться в сети и поддерживать исходящие звонки.",
+     "Пополнение для активации не больше 300-400р"
+  ] },
+
+  { "country": "Russia", "flag": "/flags/russia.svg",
+    "operator": "Beeline",
+    "logo": "/operators/beeline.png",
+    "price": [120, 200], "currency": "₽", "details": [
+      "SIM должна регистрироваться в сети и поддерживать исходящие звонки.",
+      "Пополнение для активации не больше 300-400р"
+  ] },
+
+  { "country": "Russia",
+    "flag": "/flags/russia.svg",
+    "operator": "Megafon",
+    "logo": "/operators/megafon.png",
+    "price": [120, 200], "currency": "₽", "details": [
+      "SIM должна регистрироваться в сети и поддерживать исходящие звонки.",
+      "Пополнение для активации не больше 300-400р"
+  ] },
+
+  { "country": "Russia",
+    "flag": "/flags/russia.svg",
+    "operator": "Tele2",
+    "logo": "/operators/tele2.png",
+    "price": [120, 200], "currency": "₽", "details": [
+      "SIM должна регистрироваться в сети и поддерживать исходящие звонки.",
+      "Пополнение для активации не больше 300-400р"
+  ] },
+
+  { "country": "Russia",
+    "flag": "/flags/russia.svg",
+    "operator": "Yota",
+    "logo": "/operators/yota.png",
+    "price": [120, 200], "currency": "₽", "details": [
+      "SIM должна регистрироваться в сети и поддерживать исходящие звонки.",
+      "Пополнение для активации не больше 300-400р"
+  ] },
+  
+  { "country": "Russia",
+    "flag": "/flags/russia.svg",
+    "operator": "Gazprom Mobile",
+    "logo": "/operators/gazprom-mobile.png",
+    "price": [120, 200], "currency": "₽", "details": [
+      "SIM должна регистрироваться в сети и поддерживать исходящие звонки.",
+      "Пополнение для активации не больше 300-400р"
+  ] },
+  
+ { "country": "Russia",
+    "flag": "/flags/russia.svg",
+    "operator": "Rostelekom",
+    "logo": "/operators/rostelekom.png",
+    "price": [120, 200], "currency": "₽", "details": [
+      "SIM должна регистрироваться в сети и поддерживать исходящие звонки.",
+      "Пополнение для активации не больше 300-400р"
+  ] },  
+
+ { "country": "Russia",
+    "flag": "/flags/russia.svg",
+    "operator": "Sber Mobile",
+    "logo": "/operators/sber-mobile.png",
+    "price": [120, 200], "currency": "₽", "details": [
+      "SIM должна регистрироваться в сети и поддерживать исходящие звонки.",
+      "Пополнение для активации не больше 300-400р"
+  ] },
+
+  { "country": "Ukraine", "flag": "/flags/ukraine.svg", "operator": "Kyivstar", "logo": "/operators/kyivstar.png", "price": "Договорная", "currency": "UAH", "details": ["Условия будут уточняться индивидуально."] },
+  { "country": "Ukraine", "flag": "/flags/ukraine.svg", "operator": "Lifecell", "logo": "/operators/lifecell.png", "price": "Договорная", "currency": "UAH", "details": ["Условия будут уточняться индивидуально."] },
+
+  
+  { "country": "Belarus", "flag": "/flags/belarus.svg", "operator": "MTS",  "logo": "/operators/mts.png",  "price": "Договорная", "currency": "BYN", "details": [] },
+  { "country": "Belarus", "flag": "/flags/belarus.svg", "operator": "A1",   "logo": "/operators/a1.png",   "price": "Договорная", "currency": "BYN", "details": [] },
+  { "country": "Belarus", "flag": "/flags/belarus.svg", "operator": "A1 \"Privet\"",   "logo": "/operators/a1.png",   "price": "Договорная", "currency": "BYN", "details": [] },
+  { "country": "Belarus", "flag": "/flags/belarus.svg", "operator": "Life", "logo": "/operators/life.png", "price": "Договорная", "currency": "BYN", "details": [] },
+
+
+  { "country": "Kazakhstan", "flag": "/flags/kazakhstan.svg", "operator": "Activ",   "logo": "/operators/activ.png",   "price": "Договорная", "currency": "KZT", "details": [] },
+  { "country": "Kazakhstan", "flag": "/flags/kazakhstan.svg", "operator": "Altel",   "logo": "/operators/altel.png",   "price": "Договорная", "currency": "KZT", "details": [] },
+  { "country": "Kazakhstan", "flag": "/flags/kazakhstan.svg", "operator": "Beeline", "logo": "/operators/beeline.png", "price": "Договорная", "currency": "KZT", "details": [] },
+  { "country": "Kazakhstan", "flag": "/flags/kazakhstan.svg", "operator": "Tele2",   "logo": "/operators/tele2.png",   "price": "Договорная", "currency": "KZT", "details": [] },
+
+ 
+  { "country": "Georgia", "flag": "/flags/georgia.svg", "operator": "Geocell", "logo": "/operators/geocell.png", "price": "Договорная", "currency": "GEL", "details": [] },
+
+
+  { "country": "Lithuania", "flag": "/flags/lithuania.svg", "operator": "Pildyk", "logo": "/operators/pildyk.png", "price": "Договорная", "currency": "EUR", "details": [] },
+  { "country": "Lithuania", "flag": "/flags/lithuania.svg", "operator": "Ezys",   "logo": "/operators/ezys.png",   "price": "Договорная", "currency": "EUR", "details": [] },
+  { "country": "Lithuania", "flag": "/flags/lithuania.svg", "operator": "Labas",   "logo": "/operators/labas.png",   "price": "Договорная", "currency": "EUR", "details": [] },
+
+  
+  { "country": "Latvia", "flag": "/flags/latvia.svg", "operator": "LMT",          "logo": "/operators/lmt.png",    "price": "Договорная", "currency": "EUR", "details": [] },
+  { "country": "Latvia", "flag": "/flags/latvia.svg", "operator": "Zelta Zivtins","logo": "/operators/zelta.png",   "price": "Договорная", "currency": "EUR", "details": [] },
+
+
+  { "country": "Philippines", "flag": "/flags/philippines.svg", "operator": "TM",    "logo": "/operators/tm.png",    "price": "Договорная", "currency": "PHP", "details": [] },
+  { "country": "Philippines", "flag": "/flags/philippines.svg", "operator": "Globe", "logo": "/operators/globe.png", "price": "Договорная", "currency": "PHP", "details": [] },
+  { "country": "Philippines", "flag": "/flags/philippines.svg", "operator": "TNT",   "logo": "/operators/tnt.png",   "price": "Договорная", "currency": "PHP", "details": [] },
+
+
+  { "country": "France", "flag": "/flags/france.svg", "operator": "Lebara",   "logo": "/operators/lebara.png",   "price": "Договорная", "currency": "EUR", "details": [] },
+  { "country": "France", "flag": "/flags/france.svg", "operator": "SFR",      "logo": "/operators/sfr.png",      "price": "Договорная", "currency": "EUR", "details": [] },
+  { "country": "France", "flag": "/flags/france.svg", "operator": "Vectone",  "logo": "/operators/vectone.png",  "price": "Договорная", "currency": "EUR", "details": [] },
+
+  
+  { "country": "Spain", "flag": "/flags/spain.svg", "operator": "Movistar",    "logo": "/operators/movistar.png",    "price": "Договорная", "currency": "EUR", "details": [] },
+  { "country": "Spain", "flag": "/flags/spain.svg", "operator": "Orange",      "logo": "/operators/orange.png",      "price": "Договорная", "currency": "EUR", "details": [] },
+  { "country": "Spain", "flag": "/flags/spain.svg", "operator": "Llamaya",     "logo": "/operators/llamaya.png",     "price": "Договорная", "currency": "EUR", "details": [] },
+  { "country": "Spain", "flag": "/flags/spain.svg", "operator": "Lebara",      "logo": "/operators/lebara.png",      "price": "Договорная", "currency": "EUR", "details": [] },
+  { "country": "Spain", "flag": "/flags/spain.svg", "operator": "Lycamobile",  "logo": "/operators/lycamobile.png",  "price": "Договорная", "currency": "EUR", "details": [] },
+
+  
+  { "country": "Germany", "flag": "/flags/germany.svg", "operator": "Lebara",      "logo": "/operators/lebara.png",     "price": "Договорная", "currency": "EUR", "details": [] },
+  { "country": "Germany", "flag": "/flags/germany.svg", "operator": "Lycamobile",  "logo": "/operators/lycamobile.png", "price": "Договорная", "currency": "EUR", "details": [] },
+
+  
+  { "country": "Poland", "flag": "/flags/poland.svg", "operator": "Play",        "logo": "/operators/play.png",        "price": "Договорная", "currency": "PLN", "details": [] },
+  { "country": "Poland", "flag": "/flags/poland.svg", "operator": "Orange",      "logo": "/operators/orange.png",      "price": "Договорная", "currency": "PLN", "details": [] },
+  { "country": "Poland", "flag": "/flags/poland.svg", "operator": "Plus",        "logo": "/operators/plus.png",        "price": "Договорная", "currency": "PLN", "details": [] },
+  { "country": "Poland", "flag": "/flags/poland.svg", "operator": "T-Mobile",    "logo": "/operators/tmobile.png",     "price": "Договорная", "currency": "PLN", "details": [] },
+  { "country": "Poland", "flag": "/flags/poland.svg", "operator": "Heyah",       "logo": "/operators/heyah.png",       "price": "Договорная", "currency": "PLN", "details": [] },
+  { "country": "Poland", "flag": "/flags/poland.svg", "operator": "Lycamobile",  "logo": "/operators/lycamobile.png",  "price": "Договорная", "currency": "PLN", "details": [] },
+
+
+  { "country": "Kyrgyzstan", "flag": "/flags/kyrgyzstan.svg", "operator": "Beeline",        "logo": "/operators/beeline.png",        "price": 250, "currency": "KGS", "details": ["Оформленные"] },
+  { "country": "Kyrgyzstan", "flag": "/flags/kyrgyzstan.svg", "operator": "O!",      "logo": "/operators/o-kgz.png",      "price": 350, "currency": "KGS", "details": ["Оформленные"] },
+  { "country": "Kyrgyzstan", "flag": "/flags/kyrgyzstan.svg", "operator": "MegaCom",        "logo": "/operators/megacom.png",        "price": 350, "currency": "KGS", "details": ["Не оформленные"] }
+
+]

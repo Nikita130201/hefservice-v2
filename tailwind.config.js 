@@ -1,0 +1,38 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-manrope)", "system-ui", "sans-serif"],     // базовый текст
+        display: ["var(--font-dmSans)", "system-ui", "sans-serif"], // заголовки
+      },
+      colors: {
+        hef: {
+          bg: "var(--hef-bg)",
+          fg: "var(--hef-fg)",
+          dim: "var(--hef-dim)",
+          accent: "var(--hef-accent)",
+          border: "var(--hef-border)",
+          surface: "var(--hef-surface)",
+        },
+      },
+      keyframes: {
+        'fade-up': {
+          '0%':   { opacity: 0, transform: 'translateY(8px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        'fade-up': 'fade-up .6s ease-out both',
+      },
+      boxShadow: {
+        card: '0 6px 28px rgba(0,0,0,.06)',
+        'card-lg': '0 12px 40px rgba(0,0,0,.08)',
+      }
+    },
+  },
+  plugins: [],
+};
