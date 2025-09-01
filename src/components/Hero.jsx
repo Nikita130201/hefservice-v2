@@ -7,13 +7,13 @@ import Reveal from "@/components/Reveal";
 
 export default function Hero() {
   return (
-    <section
-      className={[
-        "relative",
-        "min-h-[520px] md:min-h-[620px] lg:min-h-[680px]",
-        "flex items-center",
-      ].join(" ")}
-    >
+      <section
+        className={[
+            "relative overflow-x-clip", 
+            "min-h-[520px] md:min-h-[620px] lg:min-h-[680px]",
+            "flex items-center",
+          ].join(" ")}
+        >
       {/* декоративный фон */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div
