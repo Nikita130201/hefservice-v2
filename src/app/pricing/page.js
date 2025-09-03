@@ -1,9 +1,10 @@
+// src/app/pricing/page.js
 "use client";
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import baseData from "@/data/pricing.base.json";
-import Reveal from "@/components/Reveal"; // 👈 подключили
+import Reveal from "@/components/Reveal";
 
 /* ========= Локализация стран ========= */
 const COUNTRY_RU = {
@@ -245,89 +246,91 @@ export default function PricingPage() {
   }, [countries, countryQuery]);
 
   return (
-    <main className="max-w-6xl mx-auto px-4 py-8">
-      {/* Заголовок (плавный) */}
-      <Reveal duration={900} distance={16} direction="up">
-        <header className="mb-6 md:mb-8">
-          <h1 className="font-display text-3xl md:text-5xl font-extrabold tracking-tight">Цены</h1>
-          <p className="mt-3 text-[17px] leading-relaxed text-[var(--hef-dim)]">
-            Сначала выберите страну — затем оператора. Клик по «Подробнее» откроет условия.
-          </p>
-          <p className="mt-1 text-[13px] text-[var(--hef-dim)]">
-            Конвертация локальная (примерная), для точных цен — уточняйте у менеджера.
-          </p>
-        </header>
-      </Reveal>
+    <section className="section-pricing">
+      <main className="shell py-8">
+        {/* Заголовок (плавный) */}
+        <Reveal duration={900} distance={16} direction="up">
+          <header className="mb-6 md:mb-8">
+            <h1 className="font-display text-3xl md:text-5xl font-extrabold tracking-tight">Цены</h1>
+            <p className="mt-3 text-[17px] leading-relaxed text-[var(--hef-dim)]">
+              Сначала выберите страну — затем оператора. Клик по «Подробнее» откроет условия.
+            </p>
+            <p className="mt-1 text-[13px] text-[var(--hef-dim)]">
+              Конвертация локальная (примерная), для точных цен — уточняйте у менеджера.
+            </p>
+          </header>
+        </Reveal>
 
-      {/* Валюта + поиск (плавный) */}
-      <Reveal duration={900} distance={16} direction="up" delay={120}>
-        <div className="flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
-          <label className="relative block sm:max-w-md">
-            <input
-              type="search"
-              placeholder="Поиск: страна…"
-              value={countryQuery}
-              onChange={(e) => setCountryQuery(e.target.value)}
-              className="w-full rounded-2xl border border-[var(--hef-border)] bg-white/80 px-4 py-2.5 pr-10 text-[15px] outline-none focus:border-[var(--hef-accent)]"
-            />
-            <svg className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 opacity-60" viewBox="0 0 24 24" fill="none">
-              <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="1.5" />
-              <path d="M20 20L17 17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-            </svg>
-          </label>
-
-          <div className="flex items-center gap-3">
-            <span className="text-sm text-[var(--hef-dim)]">Валюта</span>
-            <select
-              value={displayCur}
-              onChange={(e) => setDisplayCur(e.target.value)}
-              className="rounded-2xl border border-[var(--hef-border)] bg-white/80 px-3 py-2 text-sm outline-none cursor-pointer"
-            >
-              {Object.keys(RATES_PER_USD_DEFAULT).map((code) => (
-                <option key={code} value={code}>{code}</option>
-              ))}
-            </select>
-          </div>
-        </div>
-      </Reveal>
-
-      {/* Сетка стран с поочередной анимацией */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 mb-8">
-        {filteredCountries.map((c, i) => {
-          const arr = byCountry.get(c) || [];
-          const first = arr[0];
-          const flag = first?.flag;
-          const label = displayCountry(c);
-          const isActive = selected === c;
-
-          return (
-            <Reveal key={c} duration={800} distance={18} direction="up" delay={i * 60}>
-              <CountryChip
-                active={isActive}
-                flag={flag}
-                label={label}
-                count={arr.length || 0}
-                onClick={() => setSelected((prev) => (prev === c ? null : c))}
+        {/* Валюта + поиск (плавный) */}
+        <Reveal duration={900} distance={16} direction="up" delay={120}>
+          <div className="flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
+            <label className="relative block sm:max-w-md">
+              <input
+                type="search"
+                placeholder="Поиск: страна…"
+                value={countryQuery}
+                onChange={(e) => setCountryQuery(e.target.value)}
+                className="w-full rounded-2xl border border-[var(--hef-border)] bg-white/80 px-4 py-2.5 pr-10 text-[15px] outline-none focus:border-[var(--hef-accent)]"
               />
-            </Reveal>
-          );
-        })}
-        {filteredCountries.length === 0 && (
-          <div className="col-span-full py-6 text-center text-sm text-[var(--hef-dim)]">Страна не найдена</div>
-        )}
-      </div>
+              <svg className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 opacity-60" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="1.5" />
+                <path d="M20 20L17 17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              </svg>
+            </label>
 
-      {/* Карточки выбранной страны (каждая с анимацией) */}
-      {selected && (
-        <OperatorsGrid
-          key={selected}
-          countryRu={displayCountry(selected)}
-          rows={byCountry.get(selected) || []}
-          displayCur={displayCur}
-          rates={rates}
-        />
-      )}
-    </main>
+            <div className="flex items-center gap-3">
+              <span className="text-sm text-[var(--hef-dim)]">Валюта</span>
+              <select
+                value={displayCur}
+                onChange={(e) => setDisplayCur(e.target.value)}
+                className="rounded-2xl border border-[var(--hef-border)] bg-white/80 px-3 py-2 text-sm outline-none cursor-pointer"
+              >
+                {Object.keys(RATES_PER_USD_DEFAULT).map((code) => (
+                  <option key={code} value={code}>{code}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Сетка стран */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3 mb-8">
+          {filteredCountries.map((c, i) => {
+            const arr = byCountry.get(c) || [];
+            const first = arr[0];
+            const flag = first?.flag;
+            const label = displayCountry(c);
+            const isActive = selected === c;
+
+            return (
+              <Reveal key={c} duration={800} distance={18} direction="up" delay={i * 60}>
+                <CountryChip
+                  active={isActive}
+                  flag={flag}
+                  label={label}
+                  count={arr.length || 0}
+                  onClick={() => setSelected((prev) => (prev === c ? null : c))}
+                />
+              </Reveal>
+            );
+          })}
+          {filteredCountries.length === 0 && (
+            <div className="col-span-full py-6 text-center text-sm text-[var(--hef-dim)]">Страна не найдена</div>
+          )}
+        </div>
+
+        {/* Карточки выбранной страны */}
+        {selected && (
+          <OperatorsGrid
+            key={selected}
+            countryRu={displayCountry(selected)}
+            rows={byCountry.get(selected) || []}
+            displayCur={displayCur}
+            rates={rates}
+          />
+        )}
+      </main>
+    </section>
   );
 }
 
@@ -341,7 +344,7 @@ function OperatorsGrid({ countryRu, rows, displayCur, rates }) {
         <div className="text-[15px] font-medium mb-3">Операторы — {countryRu}</div>
       </Reveal>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-4">
         {rows.map((r, i) => {
           const priceStr = formatPrice(r, displayCur, rates);
           const open = openIdx === i;
