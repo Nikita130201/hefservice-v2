@@ -151,7 +151,13 @@ function OperatorCard({ r, priceStr, onToggle, open }) {
         <div className="flex items-start justify-between gap-3">
           <div className="flex items-center gap-3 min-w-0">
             {r.logo ? (
-              <Image src={r.logo} alt="" width={32} height={32} className="rounded object-contain" />
+              <Image
+                src={r.logo}
+                alt=""
+                width={32}
+                height={32}
+                className="rounded object-contain"
+              />
             ) : (
               <div className="h-8 w-8 rounded bg-[var(--hef-surface)]" />
             )}
@@ -165,11 +171,13 @@ function OperatorCard({ r, priceStr, onToggle, open }) {
           </div>
         </div>
 
+        {/* Кнопки */}
         <div className="mt-3 flex items-center gap-2">
           <button
             onClick={onToggle}
             aria-expanded={open}
-            className="cursor-pointer inline-flex items-center gap-1 rounded-lg border border-[var(--hef-border)] px-3 py-1.5 text-sm hover:bg-[rgba(0,0,0,.03)] transition"
+            className="inline-flex h-9 items-center gap-1 rounded-lg border border-[var(--hef-border)] 
+                       px-3 text-sm font-medium cursor-pointer hover:bg-[rgba(0,0,0,.03)] transition"
           >
             Подробнее
             <svg
@@ -177,18 +185,26 @@ function OperatorCard({ r, priceStr, onToggle, open }) {
               viewBox="0 0 24 24"
               fill="none"
             >
-              <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              <path
+                d="M6 9l6 6 6-6"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+              />
             </svg>
           </button>
 
           <a
             href="/sell-sim"
-            className="inline-flex items-center justify-center rounded-lg border border-[var(--hef-border)] bg-[var(--hef-surface)] px-3 py-1.5 text-sm font-medium hover:bg-white transition"
+            className="inline-flex h-9 min-w-[110px] items-center justify-center whitespace-nowrap 
+                       rounded-lg border border-[var(--hef-border)] bg-[var(--hef-surface)] 
+                       px-3 text-sm font-medium hover:bg-white transition"
           >
             Продать SIM
           </a>
         </div>
 
+        {/* Детали */}
         <div
           className={`grid transition-[grid-template-rows] duration-300 ease-out mt-2 ${
             open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
@@ -203,7 +219,9 @@ function OperatorCard({ r, priceStr, onToggle, open }) {
                   ))}
                 </ul>
               ) : (
-                <div className="text-[14px] text-[var(--hef-dim)]">Подробные условия будут добавлены.</div>
+                <div className="text-[14px] text-[var(--hef-dim)]">
+                  Подробные условия будут добавлены.
+                </div>
               )}
             </div>
           </div>
