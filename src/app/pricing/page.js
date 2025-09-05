@@ -133,7 +133,7 @@ function OperatorCard({ r, priceStr, onToggle, open }) {
   return (
     <div
       className={[
-        "relative overflow-hidden rounded-2xl border bg-white",
+        "relative rounded-2xl border bg-white",
         "border-[var(--hef-border)] shadow-[0_8px_40px_rgba(0,0,0,.05)]",
         "transition hover:shadow-[0_10px_48px_rgba(0,0,0,.07)]",
       ].join(" ")}
@@ -171,40 +171,44 @@ function OperatorCard({ r, priceStr, onToggle, open }) {
           </div>
         </div>
 
-        {/* Кнопки */}
         <div className="mt-3 flex items-center gap-2">
-          <button
-            onClick={onToggle}
-            aria-expanded={open}
-            className="inline-flex h-9 items-center gap-1 rounded-lg border border-[var(--hef-border)] 
-                       px-3 text-sm font-medium cursor-pointer hover:bg-[rgba(0,0,0,.03)] transition"
-          >
-            Подробнее
-            <svg
-              className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`}
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                d="M6 9l6 6 6-6"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-            </svg>
-          </button>
+         {/* Подробнее */}
+<button
+  onClick={onToggle}
+  aria-expanded={open}
+  className="group inline-flex h-9 min-w-[116px] items-center justify-center whitespace-nowrap
+             gap-1.5 rounded-lg border border-[var(--hef-border)] px-4 text-[14px]
+             text-[var(--hef-ink,#111)] hover:bg-[rgba(0,0,0,.03)] transition"
+>
+  <span>Подробнее</span>
+  <svg
+    className={`h-4 w-4 shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+    viewBox="0 0 24 24"
+    fill="none"
+    aria-hidden="true"
+  >
+    {/* chevron-down (вниз по умолчанию) */}
+    <path
+      d="M6 9l6 6 6-6"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+</button>
 
+          {/* Продать SIM */}
           <a
             href="/sell-sim"
-            className="inline-flex h-9 min-w-[110px] items-center justify-center whitespace-nowrap 
-                       rounded-lg border border-[var(--hef-border)] bg-[var(--hef-surface)] 
-                       px-3 text-sm font-medium hover:bg-white transition"
+            className="inline-flex h-9 min-w-[116px] items-center justify-center whitespace-nowrap
+                       rounded-lg border border-[var(--hef-border)] bg-[var(--hef-surface)]
+                       px-4 text-[14px] font-medium hover:bg-white transition"
           >
             Продать SIM
           </a>
         </div>
 
-        {/* Детали */}
         <div
           className={`grid transition-[grid-template-rows] duration-300 ease-out mt-2 ${
             open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
@@ -266,7 +270,7 @@ export default function PricingPage() {
   return (
     <section className="section-pricing">
       <main className="shell py-8">
-        {/* Заголовок (плавный) */}
+        {/* Заголовок */}
         <Reveal duration={900} distance={16} direction="up">
           <header className="mb-6 md:mb-8">
             <h1 className="font-display text-3xl md:text-5xl font-extrabold tracking-tight">Цены</h1>
@@ -279,7 +283,7 @@ export default function PricingPage() {
           </header>
         </Reveal>
 
-        {/* Валюта + поиск (плавный) */}
+        {/* Валюта + поиск */}
         <Reveal duration={900} distance={16} direction="up" delay={120}>
           <div className="flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
             <label className="relative block sm:max-w-md">

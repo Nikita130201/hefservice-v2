@@ -36,8 +36,8 @@ export default function Header() {
       <header className="fixed inset-x-0 top-0 z-50 bg-[var(--hef-bg)] text-[var(--hef-fg)] border-b border-gray-200">
         <nav className="shell h-14 flex items-center justify-between">
           {/* Лого */}
-          <Link href="/" className="flex items-center gap-2" aria-label="На главную">
-            <Image src="/logo.svg" alt="Hef Service" width={110} height={40} priority />
+          <Link href="/" className=" group flex items-center gap-2" aria-label="На главную">
+            <Image  src="/logo.svg" alt="Hef Service" width={110} height={40} priority  className="h-auto group-hover:scale-[1.02] transition" />
           </Link>
 
           {/* Десктопное меню */}
