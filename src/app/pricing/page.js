@@ -113,7 +113,7 @@ function CountryChip({ active, flag, label, count, onClick }) {
         <span className="truncate text-[15px] font-display font-semibold">{label}</span>
       </div>
       <div className="flex items-center gap-2 shrink-0">
-        <span className="text-xs text-[var(--hef-dim)]">{count} операт.</span>
+        <span className="text-xs text-[var(--hef-dim)]">{count} оп.</span>
         <svg
           className={`h-4 w-4 transition-transform ${
             active ? "translate-x-[2px]" : "group-hover:translate-x-[2px]"
